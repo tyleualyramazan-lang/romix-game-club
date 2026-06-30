@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romix Memory Match</title>
+    <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>🧠 Romix Memory</h1>
+    <h3>👤 <span id="player">Player</span></h3>
+    
+    <div class="stats">
+        <div>👟 Жүріс: <span id="moves">0</span></div>
+        <div>🏆 Рекорд: <span id="best-moves">-</span></div>
+    </div>
+
+    <div id="memory-board"></div>
+
+    <h2 id="status">Бірдей жұптарды тап!</h2>
+
+    <button onclick="restartGame()">Қайта бастау</button>
+    <button onclick="goHome()">🏠 Басты бет</button>
+</div>
+
+<script src="memory.js"></script>
+</body>
+</html>

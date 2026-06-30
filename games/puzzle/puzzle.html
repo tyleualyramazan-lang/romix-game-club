@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romix Puzzle</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>🧩 Romix Puzzle</h1>
+    <h3>👤 <span id="player">Player</span></h3>
+    
+    <div class="stats">
+        <div>⏱️ <span id="timer">00:00</span></div>
+        <div>👟 Жүріс: <span id="moves">0</span></div>
+    </div>
+
+    <div id="puzzle-board"></div>
+
+    <h2 id="status">Сандарды ретімен жина!</h2>
+
+    <button onclick="restartGame()">Қайта бастау</button>
+    <button onclick="goHome()">🏠 Басты бет</button>
+</div>
+
+<script src="puzzle.js"></script>
+</body>
+</html>

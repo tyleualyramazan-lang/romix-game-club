@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1a1a3a, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.game {
+    width: 95%;
+    max-width: 420px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 25px #00bfff;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.stats div {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #00bfff;
+    font-size: 16px;
+}
+
+#puzzle-board {
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: #111;
+    padding: 8px;
+    border-radius: 15px;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 20px #00bfff50;
+}
+
+.tile {
+    background: linear-gradient(145deg, #00bfff, #005f9e);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.tile:active {
+    transform: scale(0.95);
+}
+
+/* Бос ұяшықтың стилі */
+.empty {
+    background: #111;
+    box-shadow: none;
+    cursor: default;
+}
+
+#status {
+    min-height: 35px;
+    color: #00bfff;
+    font-size: 20px;
+}
+
+button {
+    width: 90%;
+    padding: 14px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #00bfff, #005f9e);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00bfff40;
+    display: block;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media(max-width: 500px) {
+    #puzzle-board {
+        width: 85vw;
+        height: 85vw;
+    }
+    .tile {
+        font-size: 28px;
+    }
+}

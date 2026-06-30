@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #2a1a3a, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.game {
+    width: 95%;
+    max-width: 420px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.stats div {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ff00ff;
+    font-size: 16px;
+}
+
+#memory-board {
+    margin: 20px auto;
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #111;
+    padding: 10px;
+    border-radius: 15px;
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff50;
+}
+
+.memory-card {
+    background: linear-gradient(145deg, #ff00ff, #990099);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Жабық кезде смайлик көрінбейді */
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.memory-card:active {
+    transform: scale(0.95);
+}
+
+/* Ашылған карточканың стилі */
+.memory-card.flip {
+    background: #fff;
+    font-size: 32px; /* Смайлик көрінеді */
+    transform: rotateY(180deg);
+    cursor: default;
+}
+
+/* Сәйкес келген (табылған) карточкалар */
+.memory-card.matched {
+    background: #555;
+    font-size: 32px;
+    cursor: default;
+    box-shadow: none;
+}
+
+#status {
+    min-height: 35px;
+    color: #ff00ff;
+    font-size: 20px;
+}
+
+button {
+    width: 90%;
+    padding: 14px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #ff00ff, #990099);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00ff40;
+    display: block;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media(max-width: 500px) {
+    #memory-board {
+        width: 88vw;
+        height: 88vw;
+    }
+    .memory-card.flip, .memory-card.matched {
+        font-size: 28px;
+    }
+}

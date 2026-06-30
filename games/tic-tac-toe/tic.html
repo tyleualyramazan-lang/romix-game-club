@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romix Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>⭕❌ Romix Tic Tac Toe</h1>
+    <h3>👤 <span id="player">Player</span></h3>
+
+    <div id="menu">
+        <h2>Ойын режимін таңда</h2>
+        <button onclick="startRobot()">🤖 Роботпен ойнау</button>
+        <button onclick="startTwoPlayer()">👥 Екі адам ойнау</button>
+        <button onclick="goHome()">🏠 Басты бет</button>
+    </div>
+
+    <div id="board">
+        <div onclick="move(0)"></div>
+        <div onclick="move(1)"></div>
+        <div onclick="move(2)"></div>
+        <div onclick="move(3)"></div>
+        <div onclick="move(4)"></div>
+        <div onclick="move(5)"></div>
+        <div onclick="move(6)"></div>
+        <div onclick="move(7)"></div>
+        <div onclick="move(8)"></div>
+    </div>
+
+    <h2 id="status"></h2>
+
+    <button id="restart" onclick="restart()">Қайта ойнау</button>
+    <button onclick="goHome()">🏠 Басты бет</button>
+</div>
+
+<script src="tic.js"></script>
+</body>
+</html>

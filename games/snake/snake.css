@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #123d22, #000);
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+}
+
+.game {
+    width: 95%;
+    max-width: 450px;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #00ff66;
+    text-shadow: 0 0 10px #00ff66, 0 0 30px #00ff66;
+    margin: 10px 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 элемент сыйуы үшін */
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.stats div {
+    background: linear-gradient(145deg, #111, #222);
+    padding: 8px 4px;
+    border-radius: 10px;
+    border: 1px solid #00ff66;
+    box-shadow: 0 0 15px #00ff6640;
+    font-size: 12px;
+}
+
+canvas {
+    background: linear-gradient(135deg, #020202, #061b0a);
+    border: 4px solid #00ff66;
+    border-radius: 25px;
+    box-shadow: 0 0 25px #00ff66;
+    max-width: 100%;
+    height: auto;
+}
+
+.control {
+    margin-top: 15px;
+}
+
+.control button {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    border-radius: 20px;
+    border: 2px solid #00ff66;
+    background: linear-gradient(145deg, #00ff66, #007733);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ff66;
+}
+
+.control button:active {
+    transform: scale(.9);
+}
+
+#message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, #111, #000);
+    padding: 30px;
+    width: 280px;
+    border-radius: 25px;
+    border: 3px solid #ff0066;
+    box-shadow: 0 0 30px #ff0066;
+    z-index: 10;
+}
+
+#message h2 {
+    color: #ff0066;
+}
+
+#message button {
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    background: #00ff66;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width: 500px){
+    canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}

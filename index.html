@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romix Game Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎮 Romix Game Club</h1>
+    
+    <div class="login-section">
+        <input id="playerName" placeholder="Атыңды енгіз">
+        <button onclick="startGame()">Кіру</button>
+    </div>
+
+    <h2 id="welcome"></h2>
+
+    <h2>Ойындар</h2>
+
+    <div class="games">
+        <div class="card">
+            <h3>❌ Tic Tac Toe</h3>
+            <button onclick="openTicTacToe()">Ойнау</button>
+        </div>
+
+        <div class="card">
+            <h3>🐍 Жылан ойыны</h3>
+            <p>Классикалық Snake ойыны</p>
+            <button onclick="openSnake()">Ойнау</button>
+        </div>
+
+        <div class="card">
+            <h3>🧩 Пазл</h3>
+            <p>Логикалық сандар ойыны</p>
+            <button onclick="openPuzzle()">Ойнау</button>
+        </div>
+        <div class="card">
+            <h3>🧠 Жадыны тексеру</h3>
+            <p>Смайликтердің жұбын тап</p>
+            <button onclick="openMemory()">Ойнау</button>
+        </div>
+        <div class="card">
+            <h3>🐦 Ұшатын құс</h3>
+            <p>Кедергілерден ұшып өт</p>
+            <button onclick="openFlappy()">Ойнау</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
